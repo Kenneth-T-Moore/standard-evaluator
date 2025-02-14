@@ -1,0 +1,78 @@
+{
+  "variables": [
+    {
+      "name": "a",
+      "bounds": [
+        -50.0,
+        50.0
+      ],
+      "shift": 30.0,
+      "scale": 0.1,
+      "units": null,
+      "options": {
+        "parallel_deriv_color": null
+      }
+    },
+    {
+      "name": "sub1.my_alias",
+      "bounds": [
+        -50.0,
+        50.0
+      ],
+      "shift": 0.0,
+      "scale": 1.0,
+      "units": null,
+      "options": {
+        "parallel_deriv_color": null
+      }
+    }
+  ],
+  "responses": [
+    {
+      "name": "sub1.v",
+      "bounds": [
+        0.0,
+        10.0
+      ],
+      "shift": 0.0,
+      "scale": 1.0,
+      "units": null,
+      "options": {
+        "parallel_deriv_color": null
+      }
+    },
+    {
+      "name": "sub1.z1.y",
+      "bounds": [
+        -32.32,
+        1829.0
+      ],
+      "shift": 0.0,
+      "scale": 1.0,
+      "units": null,
+      "options": {
+        "parallel_deriv_color": null
+      }
+    },
+    {
+      "name": "aero.drag",
+      "bounds": [
+        -Infinity,
+        Infinity
+      ],
+      "shift": 0.0,
+      "scale": 1.0,
+      "units": null,
+      "options": {
+        "parallel_deriv_color": null
+      }
+    }
+  ],
+  "objectives": [
+    "aero.drag"
+  ],
+  "constraints": [
+    "sub1.v",
+    "sub1.z1.y"
+  ]
+}

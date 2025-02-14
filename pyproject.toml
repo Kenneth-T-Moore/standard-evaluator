@@ -1,0 +1,81 @@
+[build-system]
+requires = [
+    "setuptools>=45",
+    "setuptools_scm[toml]>=6.2"
+    ]
+build-backend = 'setuptools.build_meta'
+
+[tool.setuptools_scm]
+
+[project]
+name = "standard_evaluator"
+description = "Project description"
+readme = "README.md"
+authors = [
+    {email = "joerg.m.gablonsky@boeing.com"},
+    # {name = "Author2", email = "email1@example.com"},
+]
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "License :: ",
+]
+dependencies = [
+    "numpy",
+    "openmdao",
+    "om-aviary",
+    "json-numpy",
+    "pydantic",
+    "h5py",
+    "numpydantic",
+]
+
+dynamic = ["version", "scripts"]
+
+# [tool.setuptools.dynamic]
+# version = {attr = "standard_evaluator.__version__"}
+
+[project.optional-dependencies]
+test = [
+    "pytest",
+    "pytest-cov",
+    "coverage",
+]
+dev = [
+    # Copy test requirements below
+    "pytest",
+    "pytest-cov",
+    "coverage",
+    # Additional requirements to test
+    "black",
+    "flake8",
+    "jupyter",
+]
+docs = [
+    # Copy test and dev requirements below
+    "pytest",
+    "pytest-cov",
+    "coverage",
+    # Additional requirements to test
+    "black",
+    "flake8",
+    # Additional requirements to test and dev
+    "sphinx",
+    "jupyter",
+    "autodocsumm",
+    "pytest-cov",
+    "sphinxcontrib-mermaid",
+    "sphinx-rtd-theme",
+    "jupyter_core<=5.1.0",
+    "myst-nb",
+    
+]
+
+[tool.pytest.ini_options]
+testpaths = "tests"
+minversion = "6.0"
+# log_cli_level = "INFO"
+# log_cli_format = "%(asctime)s [%(levelname)8s] %(message)s (%(filename)s:%(lineno)s)"
+# log_cli_date_format = "%Y-%m-%d %H:%M:%S"
+# log_cli = true

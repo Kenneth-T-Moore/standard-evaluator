@@ -1,0 +1,1617 @@
+{
+  "name": "",
+  "inputs": [
+    {
+      "name": "aero.cfd.grid",
+      "bounds": null,
+      "shift": null,
+      "scale": null,
+      "units": null,
+      "description": "",
+      "options": {
+        "tags": {
+          "__set__": [
+            "internal"
+          ]
+        },
+        "compute_shape": null,
+        "copy_shape": null,
+        "discrete": false,
+        "distributed": false,
+        "global_shape": [
+          200
+        ],
+        "global_size": 200,
+        "has_src_indices": false,
+        "shape_by_conn": true,
+        "size": 200
+      },
+      "shape": [
+        200
+      ]
+    },
+    {
+      "name": "aero.k",
+      "units": null,
+      "description": "",
+      "options": {}
+    },
+    {
+      "name": "aero.r",
+      "units": null,
+      "description": "",
+      "options": {}
+    },
+    {
+      "name": "aero.l",
+      "units": null,
+      "description": "",
+      "options": {}
+    },
+    {
+      "name": "aero.q",
+      "units": null,
+      "description": "",
+      "options": {}
+    },
+    {
+      "name": "aero.z",
+      "units": null,
+      "description": "",
+      "options": {}
+    },
+    {
+      "name": "a",
+      "units": null,
+      "description": "",
+      "options": {}
+    },
+    {
+      "name": "sub1.my_alias",
+      "units": null,
+      "description": "",
+      "options": {}
+    },
+    {
+      "name": "sub1.z1.c",
+      "units": null,
+      "description": "",
+      "options": {}
+    },
+    {
+      "name": "sub1.d",
+      "units": null,
+      "description": "",
+      "options": {}
+    },
+    {
+      "name": "sub1.z2.a",
+      "units": null,
+      "description": "",
+      "options": {}
+    },
+    {
+      "name": "sub1.z2.b",
+      "units": null,
+      "description": "",
+      "options": {}
+    },
+    {
+      "name": "sub1.c",
+      "units": null,
+      "description": "",
+      "options": {}
+    }
+  ],
+  "outputs": [
+    {
+      "name": "aero.drag",
+      "units": "N",
+      "description": "",
+      "options": {}
+    },
+    {
+      "name": "aero.geometry.bla",
+      "bounds": null,
+      "shift": null,
+      "scale": null,
+      "units": null,
+      "description": "",
+      "options": {
+        "tags": {
+          "__set__": [
+            "internal"
+          ]
+        },
+        "compute_shape": null,
+        "copy_shape": null,
+        "discrete": false,
+        "distributed": false,
+        "global_shape": [
+          200,
+          200
+        ],
+        "global_size": 40000,
+        "shape_by_conn": false,
+        "size": 40000
+      },
+      "shape": [
+        200,
+        200
+      ]
+    },
+    {
+      "name": "aero.geometry.grid",
+      "bounds": null,
+      "shift": null,
+      "scale": null,
+      "units": null,
+      "description": "",
+      "options": {
+        "tags": {
+          "__set__": [
+            "internal"
+          ]
+        },
+        "compute_shape": null,
+        "copy_shape": null,
+        "discrete": false,
+        "distributed": false,
+        "global_shape": [
+          200
+        ],
+        "global_size": 200,
+        "shape_by_conn": false,
+        "size": 200
+      },
+      "shape": [
+        200
+      ]
+    },
+    {
+      "name": "sub1.z1.y",
+      "units": null,
+      "description": "",
+      "options": {}
+    },
+    {
+      "name": "sub1.v",
+      "units": null,
+      "description": "",
+      "options": {}
+    },
+    {
+      "name": "aero.r",
+      "units": null,
+      "description": "",
+      "options": {
+        "tags": {
+          "__set__": [
+            "openmdao:indep_var",
+            "openmdao:allow_desvar"
+          ]
+        }
+      }
+    },
+    {
+      "name": "aero.l",
+      "units": null,
+      "description": "",
+      "options": {
+        "tags": {
+          "__set__": [
+            "openmdao:indep_var",
+            "openmdao:allow_desvar"
+          ]
+        }
+      }
+    },
+    {
+      "name": "aero.q",
+      "units": null,
+      "description": "",
+      "options": {
+        "tags": {
+          "__set__": [
+            "openmdao:indep_var",
+            "openmdao:allow_desvar"
+          ]
+        }
+      }
+    },
+    {
+      "name": "aero.z",
+      "units": null,
+      "description": "",
+      "options": {
+        "tags": {
+          "__set__": [
+            "openmdao:indep_var",
+            "openmdao:allow_desvar"
+          ]
+        }
+      }
+    },
+    {
+      "name": "a",
+      "units": null,
+      "description": "",
+      "options": {
+        "tags": {
+          "__set__": [
+            "openmdao:indep_var",
+            "openmdao:allow_desvar"
+          ]
+        }
+      }
+    },
+    {
+      "name": "sub1.my_alias",
+      "units": null,
+      "description": "",
+      "options": {
+        "tags": {
+          "__set__": [
+            "openmdao:indep_var",
+            "openmdao:allow_desvar"
+          ]
+        }
+      }
+    },
+    {
+      "name": "sub1.z1.c",
+      "units": null,
+      "description": "",
+      "options": {
+        "tags": {
+          "__set__": [
+            "openmdao:indep_var",
+            "openmdao:allow_desvar"
+          ]
+        }
+      }
+    },
+    {
+      "name": "sub1.d",
+      "units": null,
+      "description": "",
+      "options": {
+        "tags": {
+          "__set__": [
+            "openmdao:indep_var",
+            "openmdao:allow_desvar"
+          ]
+        }
+      }
+    },
+    {
+      "name": "sub1.z2.a",
+      "units": null,
+      "description": "",
+      "options": {
+        "tags": {
+          "__set__": [
+            "openmdao:indep_var",
+            "openmdao:allow_desvar"
+          ]
+        }
+      }
+    },
+    {
+      "name": "sub1.z2.b",
+      "units": null,
+      "description": "",
+      "options": {
+        "tags": {
+          "__set__": [
+            "openmdao:indep_var",
+            "openmdao:allow_desvar"
+          ]
+        }
+      }
+    }
+  ],
+  "cite": "",
+  "tool": "<class '__main__.Intermediate3'>",
+  "component_type": "Group",
+  "options": {
+    "openmdao_info": {
+      "pathname": "",
+      "iter_count": 1,
+      "iter_count_apply": 0,
+      "iter_count_without_approx": 1
+    },
+    "openmdao_options": {
+      "_dict": {
+        "assembled_jac_type": {
+          "val": "csc",
+          "values": [
+            "csc",
+            "dense"
+          ],
+          "types": null,
+          "desc": "Linear solver(s) in this group or implicit component, if using an assembled jacobian, will use this type.",
+          "upper": null,
+          "lower": null,
+          "check_valid": null,
+          "has_been_set": true,
+          "allow_none": false,
+          "recordable": true,
+          "set_function": null,
+          "deprecation": null
+        },
+        "derivs_method": {
+          "val": null,
+          "values": [
+            "jax",
+            "cs",
+            "fd",
+            null
+          ],
+          "types": null,
+          "desc": "The method to use for computing derivatives",
+          "upper": null,
+          "lower": null,
+          "check_valid": null,
+          "has_been_set": true,
+          "allow_none": true,
+          "recordable": true,
+          "set_function": null,
+          "deprecation": null
+        },
+        "auto_order": {
+          "val": false,
+          "values": [
+            true,
+            false
+          ],
+          "types": {
+            "__type__": "<class 'bool'>"
+          },
+          "desc": "If True the order of subsystems is determined automatically based on the dependency graph.  It will not break or reorder cycles.",
+          "upper": null,
+          "lower": null,
+          "check_valid": null,
+          "has_been_set": true,
+          "allow_none": false,
+          "recordable": true,
+          "set_function": null,
+          "deprecation": null
+        }
+      },
+      "_parent_name": "<model> <class Intermediate3>",
+      "_read_only": false,
+      "_all_recordable": true,
+      "_context_cache": {}
+    }
+  },
+  "component_order": [
+    "sub1",
+    "aero"
+  ],
+  "components": {
+    "sub1": {
+      "name": "sub1",
+      "inputs": [
+        {
+          "name": "a",
+          "units": null,
+          "description": "",
+          "options": {}
+        },
+        {
+          "name": "my_alias",
+          "units": null,
+          "description": "",
+          "options": {}
+        },
+        {
+          "name": "z1.c",
+          "units": null,
+          "description": "",
+          "options": {}
+        },
+        {
+          "name": "d",
+          "units": null,
+          "description": "",
+          "options": {}
+        },
+        {
+          "name": "z2.a",
+          "units": null,
+          "description": "",
+          "options": {}
+        },
+        {
+          "name": "z2.b",
+          "units": null,
+          "description": "",
+          "options": {}
+        },
+        {
+          "name": "c",
+          "units": null,
+          "description": "",
+          "options": {}
+        }
+      ],
+      "outputs": [
+        {
+          "name": "z1.y",
+          "units": null,
+          "description": "",
+          "options": {}
+        },
+        {
+          "name": "v",
+          "units": null,
+          "description": "",
+          "options": {}
+        }
+      ],
+      "cite": "",
+      "tool": "<class '__main__.Sub1'>",
+      "component_type": "Group",
+      "options": {
+        "openmdao_info": {
+          "pathname": "sub1",
+          "iter_count": 1,
+          "iter_count_apply": 0,
+          "iter_count_without_approx": 1
+        },
+        "openmdao_options": {
+          "_dict": {
+            "assembled_jac_type": {
+              "val": "csc",
+              "values": [
+                "csc",
+                "dense"
+              ],
+              "types": null,
+              "desc": "Linear solver(s) in this group or implicit component, if using an assembled jacobian, will use this type.",
+              "upper": null,
+              "lower": null,
+              "check_valid": null,
+              "has_been_set": true,
+              "allow_none": false,
+              "recordable": true,
+              "set_function": null,
+              "deprecation": null
+            },
+            "derivs_method": {
+              "val": null,
+              "values": [
+                "jax",
+                "cs",
+                "fd",
+                null
+              ],
+              "types": null,
+              "desc": "The method to use for computing derivatives",
+              "upper": null,
+              "lower": null,
+              "check_valid": null,
+              "has_been_set": true,
+              "allow_none": true,
+              "recordable": true,
+              "set_function": null,
+              "deprecation": null
+            },
+            "auto_order": {
+              "val": false,
+              "values": [
+                true,
+                false
+              ],
+              "types": {
+                "__type__": "<class 'bool'>"
+              },
+              "desc": "If True the order of subsystems is determined automatically based on the dependency graph.  It will not break or reorder cycles.",
+              "upper": null,
+              "lower": null,
+              "check_valid": null,
+              "has_been_set": true,
+              "allow_none": false,
+              "recordable": true,
+              "set_function": null,
+              "deprecation": null
+            }
+          },
+          "_parent_name": "'sub1' <class Sub1>",
+          "_read_only": false,
+          "_all_recordable": true,
+          "_context_cache": {}
+        }
+      },
+      "component_order": [
+        "z1",
+        "z2"
+      ],
+      "components": {
+        "z1": {
+          "name": "z1",
+          "inputs": [
+            {
+              "name": "a",
+              "units": null,
+              "description": "",
+              "options": {}
+            },
+            {
+              "name": "b",
+              "units": null,
+              "description": "",
+              "options": {}
+            },
+            {
+              "name": "c",
+              "units": null,
+              "description": "",
+              "options": {}
+            },
+            {
+              "name": "d",
+              "units": null,
+              "description": "",
+              "options": {}
+            }
+          ],
+          "outputs": [
+            {
+              "name": "y",
+              "units": null,
+              "description": "",
+              "options": {}
+            }
+          ],
+          "cite": "",
+          "tool": "<class 'openmdao.components.exec_comp.ExecComp'>",
+          "component_type": "EquationComponent",
+          "options": {
+            "openmdao_info": {
+              "pathname": "sub1.z1",
+              "iter_count": 1,
+              "iter_count_apply": 0,
+              "iter_count_without_approx": 1
+            },
+            "openmdao_options": {
+              "_dict": {
+                "has_diag_partials": {
+                  "val": false,
+                  "values": [
+                    true,
+                    false
+                  ],
+                  "types": {
+                    "__type__": "<class 'bool'>"
+                  },
+                  "desc": "If True, treat all array/array partials as diagonal if both arrays have size > 1. All arrays with size > 1 must have the same flattened size or an exception will be raised.",
+                  "upper": null,
+                  "lower": null,
+                  "check_valid": null,
+                  "has_been_set": true,
+                  "allow_none": false,
+                  "recordable": true,
+                  "set_function": null,
+                  "deprecation": null
+                },
+                "units": {
+                  "val": null,
+                  "values": null,
+                  "types": {
+                    "__type__": "<class 'str'>"
+                  },
+                  "desc": "Units to be assigned to all variables in this component. Default is None, which means units may be provided for variables individually.",
+                  "upper": null,
+                  "lower": null,
+                  "check_valid": {
+                    "__Callable__": {
+                      "name": "check_option",
+                      "module": "openmdao.components.exec_comp"
+                    }
+                  },
+                  "has_been_set": true,
+                  "allow_none": true,
+                  "recordable": true,
+                  "set_function": null,
+                  "deprecation": null
+                },
+                "shape": {
+                  "val": null,
+                  "values": null,
+                  "types": [
+                    {
+                      "__type__": "<class 'int'>"
+                    },
+                    {
+                      "__type__": "<class 'tuple'>"
+                    },
+                    {
+                      "__type__": "<class 'list'>"
+                    }
+                  ],
+                  "desc": "Shape to be assigned to all variables in this component. Default is None, which means shape may be provided for variables individually.",
+                  "upper": null,
+                  "lower": null,
+                  "check_valid": null,
+                  "has_been_set": true,
+                  "allow_none": true,
+                  "recordable": true,
+                  "set_function": null,
+                  "deprecation": null
+                },
+                "shape_by_conn": {
+                  "val": false,
+                  "values": [
+                    true,
+                    false
+                  ],
+                  "types": {
+                    "__type__": "<class 'bool'>"
+                  },
+                  "desc": "If True, shape all inputs and outputs based on their connection. Default is False.",
+                  "upper": null,
+                  "lower": null,
+                  "check_valid": null,
+                  "has_been_set": true,
+                  "allow_none": false,
+                  "recordable": true,
+                  "set_function": null,
+                  "deprecation": null
+                },
+                "do_coloring": {
+                  "val": false,
+                  "values": [
+                    true,
+                    false
+                  ],
+                  "types": {
+                    "__type__": "<class 'bool'>"
+                  },
+                  "desc": "If True (the default), compute the partial jacobian coloring for this component.",
+                  "upper": null,
+                  "lower": null,
+                  "check_valid": null,
+                  "has_been_set": true,
+                  "allow_none": false,
+                  "recordable": true,
+                  "set_function": null,
+                  "deprecation": null
+                }
+              },
+              "_parent_name": "'sub1.z1' <class ExecComp>",
+              "_read_only": false,
+              "_all_recordable": true,
+              "_context_cache": {}
+            }
+          },
+          "equations": [
+            "y = a + b + c + d"
+          ]
+        },
+        "z2": {
+          "name": "z2",
+          "inputs": [
+            {
+              "name": "a",
+              "units": null,
+              "description": "",
+              "options": {}
+            },
+            {
+              "name": "b",
+              "units": null,
+              "description": "",
+              "options": {}
+            },
+            {
+              "name": "c",
+              "units": null,
+              "description": "",
+              "options": {}
+            },
+            {
+              "name": "d",
+              "units": null,
+              "description": "",
+              "options": {}
+            }
+          ],
+          "outputs": [
+            {
+              "name": "v",
+              "units": null,
+              "description": "",
+              "options": {}
+            }
+          ],
+          "cite": "",
+          "tool": "<class 'openmdao.components.exec_comp.ExecComp'>",
+          "component_type": "EquationComponent",
+          "options": {
+            "openmdao_info": {
+              "pathname": "sub1.z2",
+              "iter_count": 1,
+              "iter_count_apply": 0,
+              "iter_count_without_approx": 1
+            },
+            "openmdao_options": {
+              "_dict": {
+                "has_diag_partials": {
+                  "val": false,
+                  "values": [
+                    true,
+                    false
+                  ],
+                  "types": {
+                    "__type__": "<class 'bool'>"
+                  },
+                  "desc": "If True, treat all array/array partials as diagonal if both arrays have size > 1. All arrays with size > 1 must have the same flattened size or an exception will be raised.",
+                  "upper": null,
+                  "lower": null,
+                  "check_valid": null,
+                  "has_been_set": true,
+                  "allow_none": false,
+                  "recordable": true,
+                  "set_function": null,
+                  "deprecation": null
+                },
+                "units": {
+                  "val": null,
+                  "values": null,
+                  "types": {
+                    "__type__": "<class 'str'>"
+                  },
+                  "desc": "Units to be assigned to all variables in this component. Default is None, which means units may be provided for variables individually.",
+                  "upper": null,
+                  "lower": null,
+                  "check_valid": {
+                    "__Callable__": {
+                      "name": "check_option",
+                      "module": "openmdao.components.exec_comp"
+                    }
+                  },
+                  "has_been_set": true,
+                  "allow_none": true,
+                  "recordable": true,
+                  "set_function": null,
+                  "deprecation": null
+                },
+                "shape": {
+                  "val": null,
+                  "values": null,
+                  "types": [
+                    {
+                      "__type__": "<class 'int'>"
+                    },
+                    {
+                      "__type__": "<class 'tuple'>"
+                    },
+                    {
+                      "__type__": "<class 'list'>"
+                    }
+                  ],
+                  "desc": "Shape to be assigned to all variables in this component. Default is None, which means shape may be provided for variables individually.",
+                  "upper": null,
+                  "lower": null,
+                  "check_valid": null,
+                  "has_been_set": true,
+                  "allow_none": true,
+                  "recordable": true,
+                  "set_function": null,
+                  "deprecation": null
+                },
+                "shape_by_conn": {
+                  "val": false,
+                  "values": [
+                    true,
+                    false
+                  ],
+                  "types": {
+                    "__type__": "<class 'bool'>"
+                  },
+                  "desc": "If True, shape all inputs and outputs based on their connection. Default is False.",
+                  "upper": null,
+                  "lower": null,
+                  "check_valid": null,
+                  "has_been_set": true,
+                  "allow_none": false,
+                  "recordable": true,
+                  "set_function": null,
+                  "deprecation": null
+                },
+                "do_coloring": {
+                  "val": false,
+                  "values": [
+                    true,
+                    false
+                  ],
+                  "types": {
+                    "__type__": "<class 'bool'>"
+                  },
+                  "desc": "If True (the default), compute the partial jacobian coloring for this component.",
+                  "upper": null,
+                  "lower": null,
+                  "check_valid": null,
+                  "has_been_set": true,
+                  "allow_none": false,
+                  "recordable": true,
+                  "set_function": null,
+                  "deprecation": null
+                }
+              },
+              "_parent_name": "'sub1.z2' <class ExecComp>",
+              "_read_only": false,
+              "_all_recordable": true,
+              "_context_cache": {}
+            }
+          },
+          "equations": [
+            "v = a + b + c + d"
+          ]
+        }
+      },
+      "promotions": {
+        "z1": [
+          [
+            "a",
+            "a"
+          ],
+          [
+            "b",
+            "my_alias"
+          ],
+          [
+            "c",
+            "z1.c"
+          ],
+          [
+            "d",
+            "d"
+          ],
+          [
+            "y",
+            "z1.y"
+          ]
+        ],
+        "z2": [
+          [
+            "a",
+            "z2.a"
+          ],
+          [
+            "b",
+            "z2.b"
+          ],
+          [
+            "c",
+            "c"
+          ],
+          [
+            "d",
+            "d"
+          ],
+          [
+            "v",
+            "v"
+          ]
+        ]
+      },
+      "linkage": [
+        [
+          "z1.y",
+          "c"
+        ]
+      ]
+    },
+    "aero": {
+      "name": "aero",
+      "inputs": [
+        {
+          "name": "cfd.grid",
+          "bounds": null,
+          "shift": null,
+          "scale": null,
+          "units": null,
+          "description": "",
+          "options": {
+            "tags": {
+              "__set__": [
+                "internal"
+              ]
+            },
+            "compute_shape": null,
+            "copy_shape": null,
+            "discrete": false,
+            "distributed": false,
+            "global_shape": [
+              200
+            ],
+            "global_size": 200,
+            "has_src_indices": false,
+            "shape_by_conn": true,
+            "size": 200
+          },
+          "shape": [
+            200
+          ]
+        },
+        {
+          "name": "k",
+          "units": null,
+          "description": "",
+          "options": {}
+        },
+        {
+          "name": "r",
+          "units": null,
+          "description": "",
+          "options": {}
+        },
+        {
+          "name": "l",
+          "units": null,
+          "description": "",
+          "options": {}
+        },
+        {
+          "name": "q",
+          "units": null,
+          "description": "",
+          "options": {}
+        },
+        {
+          "name": "z",
+          "units": null,
+          "description": "",
+          "options": {}
+        }
+      ],
+      "outputs": [
+        {
+          "name": "drag",
+          "units": "N",
+          "description": "",
+          "options": {}
+        },
+        {
+          "name": "geometry.bla",
+          "bounds": null,
+          "shift": null,
+          "scale": null,
+          "units": null,
+          "description": "",
+          "options": {
+            "tags": {
+              "__set__": [
+                "internal"
+              ]
+            },
+            "compute_shape": null,
+            "copy_shape": null,
+            "discrete": false,
+            "distributed": false,
+            "global_shape": [
+              200,
+              200
+            ],
+            "global_size": 40000,
+            "shape_by_conn": false,
+            "size": 40000
+          },
+          "shape": [
+            200,
+            200
+          ]
+        },
+        {
+          "name": "geometry.grid",
+          "bounds": null,
+          "shift": null,
+          "scale": null,
+          "units": null,
+          "description": "",
+          "options": {
+            "tags": {
+              "__set__": [
+                "internal"
+              ]
+            },
+            "compute_shape": null,
+            "copy_shape": null,
+            "discrete": false,
+            "distributed": false,
+            "global_shape": [
+              200
+            ],
+            "global_size": 200,
+            "shape_by_conn": false,
+            "size": 200
+          },
+          "shape": [
+            200
+          ]
+        }
+      ],
+      "cite": "",
+      "tool": "<class '__main__.Aero'>",
+      "component_type": "Group",
+      "options": {
+        "openmdao_info": {
+          "pathname": "aero",
+          "iter_count": 1,
+          "iter_count_apply": 0,
+          "iter_count_without_approx": 1
+        },
+        "openmdao_options": {
+          "_dict": {
+            "assembled_jac_type": {
+              "val": "csc",
+              "values": [
+                "csc",
+                "dense"
+              ],
+              "types": null,
+              "desc": "Linear solver(s) in this group or implicit component, if using an assembled jacobian, will use this type.",
+              "upper": null,
+              "lower": null,
+              "check_valid": null,
+              "has_been_set": true,
+              "allow_none": false,
+              "recordable": true,
+              "set_function": null,
+              "deprecation": null
+            },
+            "derivs_method": {
+              "val": null,
+              "values": [
+                "jax",
+                "cs",
+                "fd",
+                null
+              ],
+              "types": null,
+              "desc": "The method to use for computing derivatives",
+              "upper": null,
+              "lower": null,
+              "check_valid": null,
+              "has_been_set": true,
+              "allow_none": true,
+              "recordable": true,
+              "set_function": null,
+              "deprecation": null
+            },
+            "auto_order": {
+              "val": false,
+              "values": [
+                true,
+                false
+              ],
+              "types": {
+                "__type__": "<class 'bool'>"
+              },
+              "desc": "If True the order of subsystems is determined automatically based on the dependency graph.  It will not break or reorder cycles.",
+              "upper": null,
+              "lower": null,
+              "check_valid": null,
+              "has_been_set": true,
+              "allow_none": false,
+              "recordable": true,
+              "set_function": null,
+              "deprecation": null
+            }
+          },
+          "_parent_name": "'aero' <class Aero>",
+          "_read_only": false,
+          "_all_recordable": true,
+          "_context_cache": {}
+        }
+      },
+      "component_order": [
+        "geometry",
+        "cfd"
+      ],
+      "components": {
+        "geometry": {
+          "name": "geometry",
+          "inputs": [
+            {
+              "name": "l",
+              "units": null,
+              "description": "",
+              "options": {}
+            },
+            {
+              "name": "q",
+              "units": null,
+              "description": "",
+              "options": {}
+            },
+            {
+              "name": "z",
+              "units": null,
+              "description": "",
+              "options": {}
+            }
+          ],
+          "outputs": [
+            {
+              "name": "bla",
+              "bounds": null,
+              "shift": null,
+              "scale": null,
+              "units": null,
+              "description": "",
+              "options": {
+                "tags": {
+                  "__set__": [
+                    "internal"
+                  ]
+                },
+                "compute_shape": null,
+                "copy_shape": null,
+                "discrete": false,
+                "distributed": false,
+                "global_shape": [
+                  200,
+                  200
+                ],
+                "global_size": 40000,
+                "shape_by_conn": false,
+                "size": 40000
+              },
+              "shape": [
+                200,
+                200
+              ]
+            },
+            {
+              "name": "grid",
+              "bounds": null,
+              "shift": null,
+              "scale": null,
+              "units": null,
+              "description": "",
+              "options": {
+                "tags": {
+                  "__set__": [
+                    "internal"
+                  ]
+                },
+                "compute_shape": null,
+                "copy_shape": null,
+                "discrete": false,
+                "distributed": false,
+                "global_shape": [
+                  200
+                ],
+                "global_size": 200,
+                "shape_by_conn": false,
+                "size": 200
+              },
+              "shape": [
+                200
+              ]
+            }
+          ],
+          "cite": "",
+          "tool": "<class 'openmdao.components.exec_comp.ExecComp'>",
+          "component_type": "EquationComponent",
+          "options": {
+            "openmdao_info": {
+              "pathname": "aero.geometry",
+              "iter_count": 1,
+              "iter_count_apply": 0,
+              "iter_count_without_approx": 1
+            },
+            "openmdao_options": {
+              "_dict": {
+                "has_diag_partials": {
+                  "val": false,
+                  "values": [
+                    true,
+                    false
+                  ],
+                  "types": {
+                    "__type__": "<class 'bool'>"
+                  },
+                  "desc": "If True, treat all array/array partials as diagonal if both arrays have size > 1. All arrays with size > 1 must have the same flattened size or an exception will be raised.",
+                  "upper": null,
+                  "lower": null,
+                  "check_valid": null,
+                  "has_been_set": true,
+                  "allow_none": false,
+                  "recordable": true,
+                  "set_function": null,
+                  "deprecation": null
+                },
+                "units": {
+                  "val": null,
+                  "values": null,
+                  "types": {
+                    "__type__": "<class 'str'>"
+                  },
+                  "desc": "Units to be assigned to all variables in this component. Default is None, which means units may be provided for variables individually.",
+                  "upper": null,
+                  "lower": null,
+                  "check_valid": {
+                    "__Callable__": {
+                      "name": "check_option",
+                      "module": "openmdao.components.exec_comp"
+                    }
+                  },
+                  "has_been_set": true,
+                  "allow_none": true,
+                  "recordable": true,
+                  "set_function": null,
+                  "deprecation": null
+                },
+                "shape": {
+                  "val": null,
+                  "values": null,
+                  "types": [
+                    {
+                      "__type__": "<class 'int'>"
+                    },
+                    {
+                      "__type__": "<class 'tuple'>"
+                    },
+                    {
+                      "__type__": "<class 'list'>"
+                    }
+                  ],
+                  "desc": "Shape to be assigned to all variables in this component. Default is None, which means shape may be provided for variables individually.",
+                  "upper": null,
+                  "lower": null,
+                  "check_valid": null,
+                  "has_been_set": true,
+                  "allow_none": true,
+                  "recordable": true,
+                  "set_function": null,
+                  "deprecation": null
+                },
+                "shape_by_conn": {
+                  "val": false,
+                  "values": [
+                    true,
+                    false
+                  ],
+                  "types": {
+                    "__type__": "<class 'bool'>"
+                  },
+                  "desc": "If True, shape all inputs and outputs based on their connection. Default is False.",
+                  "upper": null,
+                  "lower": null,
+                  "check_valid": null,
+                  "has_been_set": true,
+                  "allow_none": false,
+                  "recordable": true,
+                  "set_function": null,
+                  "deprecation": null
+                },
+                "do_coloring": {
+                  "val": true,
+                  "values": [
+                    true,
+                    false
+                  ],
+                  "types": {
+                    "__type__": "<class 'bool'>"
+                  },
+                  "desc": "If True (the default), compute the partial jacobian coloring for this component.",
+                  "upper": null,
+                  "lower": null,
+                  "check_valid": null,
+                  "has_been_set": true,
+                  "allow_none": false,
+                  "recordable": true,
+                  "set_function": null,
+                  "deprecation": null
+                }
+              },
+              "_parent_name": "'aero.geometry' <class ExecComp>",
+              "_read_only": false,
+              "_all_recordable": true,
+              "_context_cache": {}
+            }
+          },
+          "equations": [
+            "grid = (q + z *l)*ones(200)",
+            "bla = outer(ones(200), ones(200))"
+          ]
+        },
+        "cfd": {
+          "name": "cfd",
+          "inputs": [
+            {
+              "name": "grid",
+              "bounds": null,
+              "shift": null,
+              "scale": null,
+              "units": null,
+              "description": "",
+              "options": {
+                "tags": {
+                  "__set__": [
+                    "internal"
+                  ]
+                },
+                "compute_shape": null,
+                "copy_shape": null,
+                "discrete": false,
+                "distributed": false,
+                "global_shape": [
+                  200
+                ],
+                "global_size": 200,
+                "has_src_indices": false,
+                "shape_by_conn": true,
+                "size": 200
+              },
+              "shape": [
+                200
+              ]
+            },
+            {
+              "name": "k",
+              "units": null,
+              "description": "",
+              "options": {}
+            },
+            {
+              "name": "r",
+              "units": null,
+              "description": "",
+              "options": {}
+            }
+          ],
+          "outputs": [
+            {
+              "name": "drag",
+              "units": "N",
+              "description": "",
+              "options": {}
+            }
+          ],
+          "cite": "",
+          "tool": "<class 'openmdao.components.exec_comp.ExecComp'>",
+          "component_type": "EquationComponent",
+          "options": {
+            "openmdao_info": {
+              "pathname": "aero.cfd",
+              "iter_count": 1,
+              "iter_count_apply": 0,
+              "iter_count_without_approx": 1
+            },
+            "openmdao_options": {
+              "_dict": {
+                "has_diag_partials": {
+                  "val": false,
+                  "values": [
+                    true,
+                    false
+                  ],
+                  "types": {
+                    "__type__": "<class 'bool'>"
+                  },
+                  "desc": "If True, treat all array/array partials as diagonal if both arrays have size > 1. All arrays with size > 1 must have the same flattened size or an exception will be raised.",
+                  "upper": null,
+                  "lower": null,
+                  "check_valid": null,
+                  "has_been_set": true,
+                  "allow_none": false,
+                  "recordable": true,
+                  "set_function": null,
+                  "deprecation": null
+                },
+                "units": {
+                  "val": null,
+                  "values": null,
+                  "types": {
+                    "__type__": "<class 'str'>"
+                  },
+                  "desc": "Units to be assigned to all variables in this component. Default is None, which means units may be provided for variables individually.",
+                  "upper": null,
+                  "lower": null,
+                  "check_valid": {
+                    "__Callable__": {
+                      "name": "check_option",
+                      "module": "openmdao.components.exec_comp"
+                    }
+                  },
+                  "has_been_set": true,
+                  "allow_none": true,
+                  "recordable": true,
+                  "set_function": null,
+                  "deprecation": null
+                },
+                "shape": {
+                  "val": null,
+                  "values": null,
+                  "types": [
+                    {
+                      "__type__": "<class 'int'>"
+                    },
+                    {
+                      "__type__": "<class 'tuple'>"
+                    },
+                    {
+                      "__type__": "<class 'list'>"
+                    }
+                  ],
+                  "desc": "Shape to be assigned to all variables in this component. Default is None, which means shape may be provided for variables individually.",
+                  "upper": null,
+                  "lower": null,
+                  "check_valid": null,
+                  "has_been_set": true,
+                  "allow_none": true,
+                  "recordable": true,
+                  "set_function": null,
+                  "deprecation": null
+                },
+                "shape_by_conn": {
+                  "val": false,
+                  "values": [
+                    true,
+                    false
+                  ],
+                  "types": {
+                    "__type__": "<class 'bool'>"
+                  },
+                  "desc": "If True, shape all inputs and outputs based on their connection. Default is False.",
+                  "upper": null,
+                  "lower": null,
+                  "check_valid": null,
+                  "has_been_set": true,
+                  "allow_none": false,
+                  "recordable": true,
+                  "set_function": null,
+                  "deprecation": null
+                },
+                "do_coloring": {
+                  "val": false,
+                  "values": [
+                    true,
+                    false
+                  ],
+                  "types": {
+                    "__type__": "<class 'bool'>"
+                  },
+                  "desc": "If True (the default), compute the partial jacobian coloring for this component.",
+                  "upper": null,
+                  "lower": null,
+                  "check_valid": null,
+                  "has_been_set": true,
+                  "allow_none": false,
+                  "recordable": true,
+                  "set_function": null,
+                  "deprecation": null
+                }
+              },
+              "_parent_name": "'aero.cfd' <class ExecComp>",
+              "_read_only": false,
+              "_all_recordable": true,
+              "_context_cache": {}
+            }
+          },
+          "equations": [
+            "drag = (inner(grid, ones(200)) + r * k)/1000"
+          ]
+        }
+      },
+      "promotions": {
+        "geometry": [
+          [
+            "l",
+            "l"
+          ],
+          [
+            "q",
+            "q"
+          ],
+          [
+            "z",
+            "z"
+          ]
+        ],
+        "cfd": [
+          [
+            "k",
+            "k"
+          ],
+          [
+            "r",
+            "r"
+          ],
+          [
+            "drag",
+            "drag"
+          ]
+        ]
+      },
+      "linkage": [
+        [
+          "geometry.grid",
+          "cfd.grid"
+        ]
+      ]
+    }
+  },
+  "promotions": {
+    "sub1": [
+      [
+        "a",
+        "a"
+      ],
+      [
+        "my_alias",
+        "sub1.my_alias"
+      ],
+      [
+        "z1.c",
+        "sub1.z1.c"
+      ],
+      [
+        "d",
+        "sub1.d"
+      ],
+      [
+        "z2.a",
+        "sub1.z2.a"
+      ],
+      [
+        "z2.b",
+        "sub1.z2.b"
+      ],
+      [
+        "c",
+        "sub1.c"
+      ],
+      [
+        "d",
+        "sub1.d"
+      ],
+      [
+        "z1.y",
+        "sub1.z1.y"
+      ],
+      [
+        "v",
+        "sub1.v"
+      ]
+    ],
+    "aero": [
+      [
+        "k",
+        "aero.k"
+      ],
+      [
+        "r",
+        "aero.r"
+      ],
+      [
+        "l",
+        "aero.l"
+      ],
+      [
+        "q",
+        "aero.q"
+      ],
+      [
+        "z",
+        "aero.z"
+      ],
+      [
+        "drag",
+        "aero.drag"
+      ]
+    ]
+  },
+  "linkage": [
+    [
+      "sub1.v",
+      "aero.k"
+    ]
+  ]
+}
