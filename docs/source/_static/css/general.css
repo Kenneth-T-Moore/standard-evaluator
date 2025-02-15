@@ -1,0 +1,35 @@
+/* Make the documentation content a little wider */
+.wy-nav-content {
+    max-width: 65%;
+}
+
+
+/* Slightly reduce dataframe font size to make it easier to view/read. Also,
+   make it so that wide dataframes have a horizontal scrollbar */
+div.output table.dataframe {
+    display: block;
+    font-size: .75em;
+    overflow-x: auto;
+    width: fit-content;
+    margin: auto;
+}
+
+/* Make index column stick to left */
+table.dataframe tbody th {
+    position: sticky;
+    left: 0;
+}
+
+/* Give index cells a background to not show values beneath */
+table.dataframe tbody tr:nth-child(even) th {
+    background-color: white;
+}
+table.dataframe tbody tr:nth-child(even):hover th {
+    background-color: #d9edfd;
+}
+table.dataframe tbody tr:nth-child(odd) th {
+    background-color: #f5f5f5;
+}
+table.dataframe tbody tr:nth-child(odd):hover th {
+    background: #d7e8f5;
+}
