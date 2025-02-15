@@ -1,0 +1,35 @@
+/* Put properties on their own lines */
+dl.property {
+    display: block !important;
+}
+
+
+/* Add space between options */
+ul.options-list > li:last-child {
+    margin-bottom: 1em;
+}
+
+/* Remove marker before option name */
+ul.options-list > li::marker {
+    content: none;
+}
+
+/* Change spacing around option explanation */
+ul.options-list > li > p:nth-child(2) {
+    margin: -.75em 0 -.25em .75em;
+}
+
+/* Change marker on option info to en dash */
+ul.options-list > li > ul > li::marker {
+    content: "– ";
+}
+
+/* Increase font size on identifier and option title */
+p.title {
+    font-size: 1.25em;
+}
+
+/* reduce space between titles */
+.title ~ .line-block {
+    margin: 0;
+}
