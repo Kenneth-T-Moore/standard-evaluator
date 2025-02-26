@@ -187,8 +187,8 @@
       "options": {
         "tags": {
           "__set__": [
-            "openmdao:indep_var",
-            "openmdao:allow_desvar"
+            "openmdao:allow_desvar",
+            "openmdao:indep_var"
           ]
         }
       }
@@ -200,8 +200,8 @@
       "options": {
         "tags": {
           "__set__": [
-            "openmdao:indep_var",
-            "openmdao:allow_desvar"
+            "openmdao:allow_desvar",
+            "openmdao:indep_var"
           ]
         }
       }
@@ -213,8 +213,8 @@
       "options": {
         "tags": {
           "__set__": [
-            "openmdao:indep_var",
-            "openmdao:allow_desvar"
+            "openmdao:allow_desvar",
+            "openmdao:indep_var"
           ]
         }
       }
@@ -226,8 +226,8 @@
       "options": {
         "tags": {
           "__set__": [
-            "openmdao:indep_var",
-            "openmdao:allow_desvar"
+            "openmdao:allow_desvar",
+            "openmdao:indep_var"
           ]
         }
       }
@@ -239,8 +239,8 @@
       "options": {
         "tags": {
           "__set__": [
-            "openmdao:indep_var",
-            "openmdao:allow_desvar"
+            "openmdao:allow_desvar",
+            "openmdao:indep_var"
           ]
         }
       }
@@ -252,8 +252,8 @@
       "options": {
         "tags": {
           "__set__": [
-            "openmdao:indep_var",
-            "openmdao:allow_desvar"
+            "openmdao:allow_desvar",
+            "openmdao:indep_var"
           ]
         }
       }
@@ -265,8 +265,8 @@
       "options": {
         "tags": {
           "__set__": [
-            "openmdao:indep_var",
-            "openmdao:allow_desvar"
+            "openmdao:allow_desvar",
+            "openmdao:indep_var"
           ]
         }
       }
@@ -278,8 +278,8 @@
       "options": {
         "tags": {
           "__set__": [
-            "openmdao:indep_var",
-            "openmdao:allow_desvar"
+            "openmdao:allow_desvar",
+            "openmdao:indep_var"
           ]
         }
       }
@@ -291,8 +291,8 @@
       "options": {
         "tags": {
           "__set__": [
-            "openmdao:indep_var",
-            "openmdao:allow_desvar"
+            "openmdao:allow_desvar",
+            "openmdao:indep_var"
           ]
         }
       }
@@ -304,8 +304,8 @@
       "options": {
         "tags": {
           "__set__": [
-            "openmdao:indep_var",
-            "openmdao:allow_desvar"
+            "openmdao:allow_desvar",
+            "openmdao:indep_var"
           ]
         }
       }
