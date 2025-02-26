@@ -234,9 +234,9 @@ def convert_enum(local_info: dict) -> Enum:
     Returns:
         Enum -- Enum instance with the stored information
     """
-    results_module = local_info[0]['__enum__']['module'].split("'")[1]
-    results_class = local_info[0]['__enum__']['type'].split("'")[1]
-    results_value = local_info[0]['__enum__']['value'].split("'")[1]
+    results_module = local_info['__enum__']['module'].split("'")[1]
+    results_class = local_info['__enum__']['type'].split("'")[1]
+    results_value = local_info['__enum__']['value'].split("'")[1]
     local_library = importlib.import_module(results_module)
     local_class = getattr(local_library, results_class)
     return [local_class(results_value), 'unitless']
@@ -251,7 +251,7 @@ def convert_path(local_info: dict) -> pathlib.WindowsPath:
     Returns:
         pathlib.WindowsPath -- WindowsPath instance with the stored information
     """
-    local_info[0] = pathlib.WindowsPath(local_info[0]['__pathlib.WindowsPath__'])
+    local_info = pathlib.WindowsPath(local_info['__pathlib.WindowsPath__'])
     return(local_info)
 
 def convert_engine_deck(info: dict) -> EngineDeck:
@@ -274,6 +274,39 @@ def convert_engine_deck(info: dict) -> EngineDeck:
     options = convert_aviary(local_info[0]['__EngineDeck__']['options']['__aviary_values__'])
     return local_class(options=options)
 
+
+def process_value(value):
+    # Define your custom processing logic here
+    if isinstance(value, list):
+        return [process_value(item) for item in value]
+    elif isinstance(value, dict):
+        if '__enum__' in value:
+            return(convert_enum(value))
+        elif '__pathlib.WindowsPath__' in value:
+            return(convert_path(value))
+        elif '__set__' in value:
+            print("Translating set")
+            return(set(value['__set__']))
+        elif '__EngineDeck__' in value:
+            return(convert_engine_deck(value))
+        return iterate_nested_dict(value)
+    else:
+        return value
+
+def iterate_nested_dict(d):
+    for key, value in d.items():
+        if isinstance(value, dict):
+            iterate_nested_dict(value)
+        elif isinstance(value, list):
+            d[key] = [process_value(item) for item in value]
+        else:
+            d[key] = process_value(value)
+    return d
+
+def convert_dict(local_av_options: dict) -> dict:
+    # Update the dictionary
+    return(iterate_nested_dict(local_av_options))
+
 def convert_aviary(local_av_options: dict) -> AviaryValues:
     """Create an AviaryValues instance from the information that was stored in on JoinedInfo instance.
     This is undoing the work done in the AviaryEncoder
@@ -284,31 +317,8 @@ def convert_aviary(local_av_options: dict) -> AviaryValues:
     Returns:
         AviaryValues -- AviaryValues instance with the stored information
     """
-    deletion_keys = []
     # Update the dictionary
-    for opt_name, opt_info in local_av_options.items():
-        if isinstance(opt_info[0], dict):
-            if '__enum__' in opt_info[0]:
-                local_av_options[opt_name] = convert_enum(opt_info)
-            elif '__pathlib.WindowsPath__' in opt_info[0]:
-                local_av_options[opt_name] = convert_path(opt_info)
-            elif '__set__' in opt_info[0]:
-                print("Translating set")
-                local_av_options[opt_name] = set(opt_info[0])
-            else:
-                print(f"WARNING: This will not work: {opt_name}, {opt_info}")
-
-        elif isinstance(opt_info[0], list):
-            if isinstance(opt_info[0][0], dict):
-                if '__pathlib.WindowsPath__' in opt_info[0][0]:
-                    local_av_options[opt_name][0] = convert_path(opt_info[0])
-                elif '__EngineDeck__' in opt_info[0][0]:
-                    local_av_options[opt_name][0][0] = convert_engine_deck(opt_info[0])
-                else:
-                    print(f"WARNING(2): This will not work: {opt_name}, {opt_info}")
-
-    for local_name in deletion_keys:
-        del(local_av_options[local_name])
+    local_av_options=convert_dict(local_av_options)
     return AviaryValues(local_av_options)
 
 def create_openmdao_options(info_dict: dict) -> dict:
@@ -366,6 +376,9 @@ def create_equation_component(info : JoinedInfo) -> om.ExecComp:
     # Add the information about shapes and units.
     for elements in info.inputs + info.outputs:
         temp_dict = {}
+        if len(elements.options) > 0:
+            if 'tags' in elements.options:
+                temp_dict['tags'] = process_value(elements.options['tags'])
         if isinstance(elements, ArrayVariable):
             if not elements.shape is None:
                 temp_dict['shape'] = elements.shape
@@ -373,7 +386,6 @@ def create_equation_component(info : JoinedInfo) -> om.ExecComp:
             temp_dict['units'] = elements.units
         if len(temp_dict) > 0:
             openmdao_options[elements.name] = temp_dict
-
     return(om.ExecComp(equations, **openmdao_options))
 
 def clean_promotions(proms: list, name: str) -> list:
@@ -474,6 +486,7 @@ def save_assembly(problem: om.Problem, assembly_name: str, state_name: str):
 def load_assembly(assembly_name: str, state_name: str) -> om.Problem:
     with open(assembly_name, "r") as infile:
         info_dict = json_numpy.load(infile)
+        info_dict = convert_dict(info_dict)
         info = GroupInfo.model_validate(info_dict)
     problem = create_problem(info)
     # We want to make sure we use the actual info from the problem
