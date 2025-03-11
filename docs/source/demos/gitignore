@@ -1,2 +1,6 @@
 .ipynb_checkpoints
 reports
+problem*_out
+after.json
+demo_group.json
+state.h5

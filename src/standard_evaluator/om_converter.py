@@ -319,6 +319,7 @@ def convert_aviary(local_av_options: dict) -> AviaryValues:
     """
     # Update the dictionary
     local_av_options=convert_dict(local_av_options)
+    print("final:", local_av_options)
     return AviaryValues(local_av_options)
 
 def create_openmdao_options(info_dict: dict) -> dict:
@@ -333,11 +334,17 @@ def create_openmdao_options(info_dict: dict) -> dict:
     minimal_dict = {}
     # We only need the values from the options in `_dict`
     local_dict = info_dict['_dict']
+    del_avairy = False
     for name, info in local_dict.items():
         if name == 'aviary_options':
-            local_dict[name] = convert_aviary(info['val']['__aviary_values__'])
+            if '__aviary_values__' in info['val']:
+                local_dict[name] = convert_aviary(info['val']['__aviary_values__'])
+            else:
+                del_avairy = True
         else:
             local_dict[name] = info['val']
+    if del_avairy:
+        del(local_dict['aviary_options'])
     return local_dict
 
 def create_explicit_component(info : JoinedInfo) -> om.ExplicitComponent:
