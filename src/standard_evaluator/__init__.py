@@ -15,7 +15,7 @@ from .aviary_encoder import AviaryEncoder
 #from .om_converter import get_input_output_info, convert_om_variable, convert_om_variable_list
 #from .om_converter import get_interface_component_standard, get_interface
 from .om_converter import get_state, set_state, save_state, load_state
-from .om_converter import get_interface, show_structure, convert_om_var
+from .om_converter import get_interface, show_structure, convert_om_var, convert_dict
 from .om_converter import create_problem, create_explicit_component, load_assembly, save_assembly
 from .om_converter import set_opt_problem, get_opt_problem
 
@@ -44,6 +44,7 @@ __all__ = [
     #"convert_om_variable", 
     #"convert_om_variable_list",
     #"get_interface_component_standard", 
+    "convert_dict",
     "get_interface",
     "get_state", 
     "set_state",

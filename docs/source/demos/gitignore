@@ -1,2 +1,7 @@
 .ipynb_checkpoints
 reports
+problem*_out
+after.json
+demo_group.json
+demo_group_NASA.json
+state.h5
